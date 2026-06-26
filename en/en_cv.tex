@@ -1,0 +1,326 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+\usepackage{fontawesome5}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+
+{\Huge \textbf{Stanislav Makarov}}
+
+\vspace{4pt}
+
+{\large Senior QA Automation Engineer \textbar\ Python \textbar\ SDET}
+
+\vspace{4pt}
+
+Moscow, Russia \textbullet\ Open to Relocation
+
+\vspace{6pt}
+
+\small
++7 993 250-39-60 \textbar\
+\href{mailto:takahiroMushashii@proton.me}{takahiroMushashii@proton.me}
+\textbar\
+\href{https://github.com/chyioIshi}{GitHub}
+\textbar\
+\href{https://linkedin.com/in/chyioIshi}{LinkedIn}
+\textbar\
+\href{https://t.me/makarovsvv}{Telegram}
+
+\end{center}
+
+\section{Summary}
+    \resumeSubHeadingListStart
+        {QA Automation Engineer / SDET with 3+ years of experience developing automated
+        testing frameworks, testing infrastructure and integration testing solutions
+        for distributed microservice platforms.
+        
+        Specialized in Python automation, REST API, gRPC, Kafka, Kubernetes,
+        CI/CD and test infrastructure development.
+        
+        Currently working as a Senior QA Automation Engineer at Ozon.
+        Previously designed and implemented a Python-based testing ecosystem
+        including API/UI frameworks, FastAPI mock services,
+        CI/CD pipelines and more than 1,200 automated tests
+        for a microservice architecture at Alfa-Bank.}
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+
+\textbf{Programming:}
+Python, SQL \\
+
+\textbf{Test Automation:}
+pytest, Playwright, Nuke, Allure TestOps, Jira Zephyr \\
+
+\textbf{Backend:}
+FastAPI, requests, Pydantic v2, Beanie ODM, PyMongo, kafka-python \\
+
+\textbf{API \& Integration:}
+REST API, gRPC, GraphQL, SOAP, Kafka, OpenAPI \\
+
+\textbf{Databases:}
+PostgreSQL, MongoDB, Valkey \\
+
+\textbf{DevOps:}
+Git, GitLab CI, Jenkins, Docker, Kubernetes, OpenShift, Helm, uv \\
+
+\textbf{Observability:}
+ELK Stack, Kibana, Prometheus, Grafana \\
+
+\textbf{Architecture:}
+Microservices, SOA, Event-Driven Architecture, Distributed Systems
+
+}}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Ozon}{May 2026 -- Present}
+        {Senior QA Automation Engineer}{Employee Profile Ozon Job}
+
+        \resumeItemListStart
+
+            \resumeItem{\textbf{Project:} Employee Profile — distributed platform responsible for employee profile management, financial information, shifts, courses data and status models. Built on gRPC, REST APIs, Kafka, Kubernetes and sharded PostgreSQL.}
+
+            \resumeItem{Develop and maintain end-to-end, API and integration tests using Python, pytest and the company's internal Nuke testing framework.}
+            
+            \resumeItem{Extend the existing automation framework, improving maintainability, readability and long-term scalability of the test suite.}
+            
+            \resumeItem{Automate regression testing for newly delivered platform functionality, reducing manual testing effort.}
+            
+            \resumeItem{Design and implement integration tests for services communicating through REST APIs, gRPC and Kafka.}
+            
+            \resumeItem{Investigate failures in distributed test environments, perform root cause analysis and collaborate closely with developers to resolve issues.}
+            
+            \resumeItem{Validate distributed system behavior using Kubernetes, GitLab CI, Valkey and sharded PostgreSQL databases.}
+            
+            \resumeItem{Participate throughout the software development lifecycle to ensure reliable delivery of new platform functionality.}
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Alfa-Bank}{Mar. 2025 -- May 2026}
+        {Senior QA Automation Engineer / Python Tooling Developer}
+        {FX Derivatives Platform}
+        
+        \resumeItemListStart
+        
+            \resumeItem{\textbf{Project:} Distributed foreign exchange derivatives platform supporting forwards, swaps and spot transactions for corporate customers. Microservice architecture built around REST APIs, Kafka and Kubernetes.}
+            
+            \resumeItem{Developed a FastAPI-based mock service for emulating external systems, enabling isolated integration testing and flexible negative testing scenarios.}
+            
+            \resumeItem{Built an internal Python service (Zeep, SOAP, REST API, MongoDB) for automated test user provisioning through the ESB, reducing test data preparation time from \textbf{1--2 days to approximately 10 minutes}.}
+            
+            \resumeItem{Designed and implemented a Jenkins CI/CD pipeline (Groovy) for automated test execution, Allure reporting and release validation.}
+            
+            \resumeItem{Built from scratch a Python automation framework supporting API, integration and UI testing for a distributed microservice platform.}
+            
+            \resumeItem{Automated up to \textbf{90\%} of testing for newly developed functionality, including integration, contract and UI test suites.}
+            
+            \resumeItem{Introduced structured JSON logging with trace identifiers and request metadata, significantly simplifying defect investigation and troubleshooting.}
+            
+            \resumeItem{Performed production issue analysis using ELK Stack, Kibana, Prometheus and Grafana.}
+            
+            \resumeItem{Worked extensively with Kubernetes, including Pods, Services, Deployments, Ingresses, Helm Charts and log analysis during system validation and incident investigation.}
+            
+            \resumeItem{Applied Shift Left Testing practices by reviewing business requirements and technical designs before implementation.}
+        
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Sber}{Oct. 2023 -- Mar. 2025}
+        {QA Automation Engineer}
+        {Salute Virtual Assistant}
+        
+        \resumeItemListStart
+        
+            \resumeItem{\textbf{Project:} AI-powered virtual assistant for investment and savings products integrated with GigaChat and internal banking services.}
+            
+            \resumeItem{Increased automated test coverage from \textbf{65\% to 80\%} by developing additional unit and integration tests.}
+            
+            \resumeItem{Refactored the existing automation framework using software design patterns, improving maintainability and reducing technical debt.}
+            
+            \resumeItem{Automated validation of an AI intent-classification model, identifying a critical discrepancy between DEV and PROD environments before release.}
+            
+            \resumeItem{Increased overall automation coverage from \textbf{60\% to 90\%}, significantly reducing regression testing time.}
+            
+            \resumeItem{Developed integration tests for microservices communicating through Kafka and REST APIs.}
+            
+            \resumeItem{Mentored junior QA engineers and interns in test automation and CI/CD practices.}
+        
+        \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{DevMirror}
+\href{https://github.com/chyioIshi/DevMirror}{\raisebox{0.2ex}{\footnotesize\faGithub}}
+$|$
+\emph{Python, FastAPI, MongoDB, Kafka, Docker}}
+{}
+
+\resumeItemListStart
+
+\resumeItem{Designed and implemented a universal mock service for integration testing of distributed microservice systems.}
+
+\resumeItem{Built using Domain-Driven Design (DDD) and Clean Architecture principles.}
+
+\resumeItem{Implemented dynamic request matching, scoped mocks, side effects, request logging and Kafka integration.}
+
+\resumeItem{Developed an extensible side-effect engine supporting HTTP callbacks, PostgreSQL, MongoDB, Redis and Kafka providers.}
+
+\resumeItem{Implemented GitHub Actions CI pipeline with Ruff linting and automated validation.}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+\section{Education}
+
+    \resumeSubHeadingListStart
+    
+    \resumeSubheading
+    {MIREA — Russian Technological University}
+    {Moscow, Russia}
+    {B.Sc. in Laser Engineering and Laser Technologies}
+    {}
+    
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,326 @@
+% !TeX program = xelatex
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{charter}
+\else
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Libertinus Serif}
+\fi
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[russian]{babel}
+\usepackage{tabularx}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter} % no T2A/Cyrillic support with pdfLaTeX
+\usepackage{fontawesome5}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.1pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+
+{\Huge \textbf{Станислав Макаров}}
+
+\vspace{4pt}
+
+{\large Senior QA Automation Engineer \textbar\ Python \textbar\ SDET}
+
+\vspace{4pt}
+
+Москва, Россия \textbullet\ Готов к релокации
+
+\vspace{6pt}
+
+\small
++7 993 250-39-60 \textbar\
+\href{mailto:takahiroMushashii@proton.me}{takahiroMushashii@proton.me}
+\textbar\
+\href{https://github.com/chyioIshi}{GitHub}
+\textbar\
+\href{https://linkedin.com/in/chyioIshi}{LinkedIn}
+\textbar\
+\href{https://t.me/makarovsvv}{Telegram}
+
+\end{center}
+
+\section{О себе}
+    \resumeSubHeadingListStart
+        \item{\textbf{QA Automation Engineer / SDET} с \textbf{3+ годами опыта разработки автотестов и тестовых инструментов для микросервисных платформ}.
+        Основная специализация -- \textbf{автоматизация на Python}, \textbf{API-тестирование}, \textbf{UI-тестирование} и \textbf{разработка тестовой инфраструктуры}.
+        Работаю в \textbf{продуктовых командах}.
+
+        Сейчас работаю в \textbf{Ozon}, занимаюсь разработкой автотестов и поддержкой тестовой инфраструктуры для внутренней платформы профиля сотрудника.
+        Ранее в \textbf{Альфа-Банке} с нуля разработал \textbf{Python-экосистему тестирования, включающую API/UI-фреймворки, mock-сервис (FastAPI), CI/CD-пайплайн
+        и модель автотестов (~1200 тестов)} для интеграционного тестирования микросервисной архитектуры.}
+    \resumeSubHeadingListEnd
+
+\section{Technical Stack}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+
+\textbf{Programming:}
+Python, SQL \\
+
+\textbf{Test Automation:}
+pytest, Playwright, Nuke, Allure TestOps, Jira Zephyr \\
+
+\textbf{Backend:}
+FastAPI, requests, Pydantic v2, Beanie ODM, PyMongo, kafka-python \\
+
+\textbf{API \& Integration:}
+REST API, gRPC, GraphQL, SOAP, Kafka, OpenAPI \\
+
+\textbf{Databases:}
+PostgreSQL, MongoDB, Valkey \\
+
+\textbf{DevOps:}
+Git, GitLab CI, Jenkins, Docker, Kubernetes, OpenShift, Helm, uv \\
+
+\textbf{Observability:}
+ELK Stack, Kibana, Prometheus, Grafana \\
+
+\textbf{Architecture:}
+Microservices, SOA, Event-Driven Architecture, Distributed Systems
+
+}}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Опыт работы}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Ozon}{Май 2026 -- настоящее время}
+        {Senior QA Automation Engineer}{Профиль сотрудника Ozon Job}
+
+        \resumeItemListStart
+
+            \resumeItem{\textbf{Проект:} Профиль сотрудника -- кластер backend сервисов, предоставляющих доступ для управления профилями сотрудников, финансовой информацией, сменами, данными о курсах и статусными моделями.}
+
+            \resumeItem{Разрабатываю и поддерживаю end-to-end, API и интеграционные тесты с использованием Python, pytest и внутреннего фреймворка Nuke.}
+
+            \resumeItem{Развиваю существующий фреймворк автоматизированного тестирования и улучшаю поддерживаемость тестового кода.}
+
+            \resumeItem{Автоматизирую регрессионное тестирование новой функциональности.}
+
+            \resumeItem{Проектирую и реализую интеграционные тесты для сервисов, преимущественно взаимодействующих через gRPC, а также REST API и Kafka.}
+
+            \resumeItem{Исследую дефекты и проблемы на тестовых окружениях, провожу первичный анализ причин и взаимодействовую с разработчиками для их устранения.}
+
+            \resumeItem{Работаю с \textbf{Kubernetes}, \textbf{GitLab CI}, \textbf{Valkey}, \textbf{шардированным PostgreSQL} при проверке поведения распределенной системы.}
+
+            \resumeItem{Участвую в проверке функциональности на разных этапах разработки, поддерживая стабильную поставку новых изменений.}
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Альфа-Банк}{Март 2025 -- Май 2026}
+        {Senior QA Automation Engineer / Python Tooling Developer}
+        {Валютные деривативы НИБ}
+
+        \resumeItemListStart
+
+            \resumeItem{\textbf{Проект:} кластер UI/API сервисов, взаимодействующих через REST API, Kafka, внутренние сервисы и
+            осуществляющих поддержку создания и проведения и получения информации о сделках (расчётные и процентные форварды, свопы, споты) для ЮЛ.}
+
+            \resumeItem{Разработал mock-сервис на FastAPI для эмуляции внешних систем, что позволило проводить изолированное интеграционное тестирование и гибко покрывать негативные сценарии.}
+
+            \resumeItem{Создал внутренний Python-сервис (Zeep, SOAP, REST API, MongoDB) для автоматизированной подготовки тестовых пользователей через ESB, сократив время подготовки тестовых данных с \textbf{1--2 дней примерно до 10 минут}.}
+
+            \resumeItem{Построил \textbf{CI/CD-пайплайн на Groovy (Jenkins)} для запуска автотестов, публикации отчётов Allure и интеграции тестирования в процесс поставки релизов.}
+
+            \resumeItem{С нуля разработал \textbf{фреймворк автоматизации тестирования} для API, интеграционного и UI-тестирования микросервисной архитектуры.}
+
+            \resumeItem{Автоматизировал \textbf{до 90\% тестов новой функциональности}, включая \textbf{интеграционные, контрактные и UI-тесты}.}
+
+            \resumeItem{Разработал стандарт структурированного логирования сервисов (JSON logs, trace-id, request/response metadata), что ускорило локализацию дефектов.}
+
+            \resumeItem{Выполнял диагностику проблем системы с использованием \textbf{ELK, Kibana, Prometheus и Grafana}.}
+
+            \resumeItem{Работал с \textbf{Kubernetes} (pods, services, ingresses, deployments, network policies, ansible-скрипты, Helm Charts) при анализе микросервисов на 
+            тестовых стендах.}
+
+            \resumeItem{Активно участвовал в \textbf{Shift Left Testing}, анализируя требования и архитектуру ещё до начала разработки.}
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Сбер}{Октябрь 2023 -- Март 2025}
+        {QA Automation Engineer}
+        {Виртуальный ассистент}
+
+        \resumeItemListStart
+
+            \resumeItem{\textbf{Проект:} Виртуальный голосовой помощник «Салют» в сфере инвестиций и накоплений - позволяет клиенту проводить активные операции
+            голосом, получать персональные консультации по сложным инвестиционнонакопительным продуктам с использованием AI-моделей и интеграцией с GigaChat.}
+
+            \resumeItem{Увеличил тестовое покрытие системы \textbf{с 65\% до 80\%}, разработав дополнительные \textbf{модульные и интеграционные тесты}.}
+
+            \resumeItem{Провёл \textbf{рефакторинг тестового фреймворка}, внедрив паттерны проектирования и повысив поддерживаемость тестового кода.}
+
+            \resumeItem{Автоматизировал тестирование \textbf{AI-модели классификации пользовательских намерений}, обнаружив критический дефект между моделями DEV и PROD.}
+
+            \resumeItem{Повысил уровень автоматизации \textbf{с 60\% до 90\%}, существенно ускорив прохождение регрессионного тестирования.}
+
+            \resumeItem{Разработал \textbf{интеграционные тесты для микросервисов}, взаимодействующих через \textbf{Kafka и REST API}.}
+
+            \resumeItem{Менторил junior QA и стажёров в области \textbf{автоматизации тестирования и CI/CD-процессов}.}
+
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Проекты}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{DevMirror}
+\href{https://github.com/chyioIshi/DevMirror}{\raisebox{0.2ex}{\footnotesize\faGithub}}
+$|$
+\emph{Python, FastAPI, MongoDB, Kafka, Docker}}
+{}
+
+\resumeItemListStart
+
+\resumeItem{Спроектировал и реализовал универсальный mock-сервис для интеграционного тестирования распределенных микросервисных систем.}
+
+\resumeItem{Разработал сервис с применением принципов DDD и Clean Architecture.}
+
+\resumeItem{Реализовал динамическое сопоставление запросов, scoped mocks, side effects, логирование операций и интеграцию с Kafka.}
+
+\resumeItem{Разработал расширяемый side-effect engine с поддержкой HTTP callbacks, PostgreSQL, MongoDB, Redis и Kafka providers.}
+
+\resumeItem{Реализовал CI-пайплайн в GitHub Actions с ruff/mypy linting и unit/integration тестами.}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+\section{Образование}
+
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {МИРЭА -- Российский технологический университет}
+    {Москва, Россия}
+    {Бакалавриат, лазерная техника и лазерные технологии}
+    {}
+
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
